@@ -6,7 +6,7 @@
   "seed": 42,
   "imgsz": 960,
   "predict_conf": 0.001,
-  "best_pt": "/content/drive/MyDrive/딥러닝/step3_week2/runs/step3/weights/best.pt",
+  "best_pt": "/content/drive/MyDrive/concrete-defect-segmentation/training/runs/baseline_seg/weights/best.pt",
   "best_pt_sha256": "2121be53949979cc6b299461557bc7d568aa846d6c9707ee999949151b727cc0",
   "manifest_sha256": "65b61408b152244fa4545be9f35cea06befbeda524e45d6e125f9c2022c59381",
   "val_images": 21,

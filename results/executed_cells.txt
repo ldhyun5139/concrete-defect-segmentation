@@ -20,14 +20,14 @@ from PIL import Image, UnidentifiedImageError
 
 drive.mount("/content/drive")
 
-DRIVE_DIR = Path("/content/drive/MyDrive/딥러닝")
-WEEK2_DIR = DRIVE_DIR / "step3_week2"
+DRIVE_DIR = Path("/content/drive/MyDrive/concrete-defect-segmentation")
+TRAIN_DIR = DRIVE_DIR / "training"
 ZIP_PATH = DRIVE_DIR / "사용한 데이터.zip"
-MANIFEST_PATH = WEEK2_DIR / "split_manifest.csv"
-BEST_PT = WEEK2_DIR / "runs" / "step3" / "weights" / "best.pt"
-BASE_DIR = DRIVE_DIR / "step3_week3"
+MANIFEST_PATH = TRAIN_DIR / "split_manifest.csv"
+BEST_PT = TRAIN_DIR / "runs" / "baseline_seg" / "weights" / "best.pt"
+BASE_DIR = DRIVE_DIR / "evaluation"
 RESULT_DIR = BASE_DIR / "results"
-DATA_ROOT = Path("/content/step3_week3/dataset_split")
+DATA_ROOT = Path("/content/evaluation/dataset_split")
 DATA_YAML = DATA_ROOT / "data.yaml"
 CLASS_NAMES = {0: "crack", 1: "efflorescence", 2: "spall_detach"}
 SEED = 42
@@ -47,7 +47,7 @@ with MANIFEST_PATH.open(encoding="utf-8-sig", newline="") as file:
 if not manifest:
     raise ValueError("분할 기록이 비어 있습니다.")
 
-# 2주차에 저장한 원본 ID 배정을 그대로 사용한다.
+# 학습에 사용한 원본 ID 배정을 그대로 사용한다.
 split_ids = {
     split: {row["origin_id"] for row in manifest if row["split"] == split}
     for split in ("train", "val", "test")
@@ -545,7 +545,7 @@ history = get_ipython().history_manager.input_hist_raw
 (RESULT_DIR / "executed_cells.txt").write_text(
     "\n\n".join(history), encoding="utf-8"
 )
-archive_path = shutil.make_archive(str(BASE_DIR / "step3_week3_results"), "zip", RESULT_DIR)
+archive_path = shutil.make_archive(str(BASE_DIR / "evaluation_results"), "zip", RESULT_DIR)
 print("결과 폴더:", RESULT_DIR)
 print("결과 ZIP:", archive_path)
 print("오류 원인을 작성할 파일:", causes_path)

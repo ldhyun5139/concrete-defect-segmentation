@@ -1,7 +1,7 @@
 task: segment
 mode: train
 model: yolov8s-seg.pt
-data: /content/step3_week2/dataset_split/data.yaml
+data: /content/training/dataset_split/data.yaml
 epochs: 60
 time: null
 patience: 20
@@ -12,8 +12,8 @@ save_period: -1
 cache: false
 device: "0"
 workers: 8
-project: /content/drive/MyDrive/딥러닝/step3_week2/runs
-name: step3
+project: /content/drive/MyDrive/concrete-defect-segmentation/training/runs
+name: baseline_seg
 exist_ok: false
 pretrained: true
 cls_remap: true
@@ -112,4 +112,4 @@ auto_augment: randaugment
 erasing: 0.4
 cfg: null
 tracker: tracktrack.yaml
-save_dir: /content/drive/MyDrive/딥러닝/step3_week2/runs/step3
+save_dir: /content/drive/MyDrive/concrete-defect-segmentation/training/runs/baseline_seg
