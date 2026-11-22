@@ -1,0 +1,7 @@
+ultralytics==8.4.216
+numpy
+pandas
+matplotlib
+opencv-python
+Pillow
+PyYAML

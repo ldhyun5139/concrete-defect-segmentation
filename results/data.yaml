@@ -1,0 +1,8 @@
+path: /content/step3_week3/dataset_split
+train: images/train
+val: val.txt
+test: test.txt
+names:
+  0: crack
+  1: efflorescence
+  2: spall_detach

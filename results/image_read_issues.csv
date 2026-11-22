@@ -1,0 +1,2 @@
+﻿split,source_key,bytes,header_hex,pillow_error,action,evaluation_image
+test,train/URT020_2021_04_03_001_2914,0,,cannot identify image file '/content/step3_week3/dataset_split/images/test/train/URT020_2021_04_03_001_2914.jpg',excluded_unreadable,

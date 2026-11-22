@@ -1,0 +1,18 @@
+{
+  "csv_metrics_verified": true,
+  "validation_thresholds_verified": true,
+  "original_id_overlap_as_recorded": {
+    "train/val": 0,
+    "train/test": 0,
+    "val/test": 0
+  },
+  "additional_filename_source_family_overlap_count": 3,
+  "additional_filename_source_families": [
+    "URT007_2022_01_13_001_3754",
+    "URT007_2022_01_13_001_5468",
+    "URT008_2022_01_07_001_6854"
+  ],
+  "test_images_after_readability_check": 20,
+  "unreadable_excluded": 1,
+  "interpretation": "Metrics describe the submitted split. Source-family overlap limits independent-test interpretation."
+}
